@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de station</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <marquee behavior="alternate">
+        <u><h1>Bienvenue au station de Carburant</h1></u>
+    </marquee>
+
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault(); onFormSubmit()">
+
+                    <div>
+                        <label for="code">Matricule*<label class="validation-error hide"  id="MatriculeValidationError">Le champs matricule doit être renseigné</label></label>
+                        <input type="text" name="code" id="Matricule" placeholder="Entrer votre matricule...">
+                    </div>
+
+
+
+                    <div>
+                        <label for="fullname">Carte_bancaire_ou_Espece* <label class="validation-error hide"  id="Carte_bancaire_ou_EspeceValidationError" >Le champs doit être renseigné</label> </label>
+                        <input type="text" name="fullname" id="Carte_bancaire_ou_Espece" placeholder="Entrer votre carte de banque ou le billet...">
+                    </div>
+                    <!--
+                    <div>
+
+                        <label for="gender">Sexe</label>
+                        <input type="text" name="gender" id="gender">
+                    </div>
+
+                
+                    <div>
+                        <label for="code">Quartier</label>
+                        <input type="text" name="address" id="address">
+                    </div>
+                -->
+                    <div>
+                        <label for="class">Quantité_de_litre</label>
+                        <input type="text" name="class" id="Quantité_de_litre" placeholder="Entrer la quantité de litre...">
+                    </div>
+                    <!---
+                    <div>
+                        <label for="school">Email</label>
+                        <input type="text" name="school" id="school">
+                    </div>
+                -->
+                    <div>
+                        <input class="form-action-buttons submit" type="submit" value="Enregistrer">
+                    </div>
+
+
+                </form>
+            </td>
+            <td>
+                <table class="list" id="emplist">
+                    <thead>
+                        <tr>
+                            <td class="thead">Matricule</td>
+                            <td class="thead">Carte_bancaire_ou_Espece</td>
+                            <td class="thead">Quantité_de_litre</td>
+                            <td class="thead">Actions</td>
+                            <!--
+                            <td class="thead">Quartier</td>
+                            <td class="thead">Tel</td>
+                            <td class="thead">Email</td>
+                            -->
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
