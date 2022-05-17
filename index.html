@@ -5,89 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de station</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/button.css">
+    <link rel="stylesheet" href="assets/css/records.css">
+    <link rel="stylesheet" href="assets/css/model.css">
+    <script src="assets/js/main.js" defer></script>
+    <title>SMS CRUD</title>
 </head>
 
 <body>
+    <header>
+        <marquee behavior="alternate" none="">
+            <h1 class="header-title">Bienvenue aux services web de carburant MY-SER24H</h1>
+        </marquee>
 
-    <marquee behavior="alternate">
-        <u><h1>Bienvenue au station de Carburant</h1></u>
-    </marquee>
+    </header>
+    <main style="background: url('BR.jpg')">
+        <button class="button blue mobile" id="idStudent">ajouter un client</button>
+        <table id="tblStudent" class="records">
+            <thead>
+                <tr>
+                    <td>Idclient</td>
+                    <td>Adresseclient</td>
+                    <td>Telclient</td>
+                    <td>Nomclient</td>
+                    <td>Prenomclient</td>
+                    <td>Age</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
 
-    <table>
-        <tr>
-            <td>
-                <form onsubmit="event.preventDefault(); onFormSubmit()">
-
-                    <div>
-                        <label for="code">Matricule*<label class="validation-error hide"  id="MatriculeValidationError">Le champs matricule doit être renseigné</label></label>
-                        <input type="text" name="code" id="Matricule" placeholder="Entrer votre matricule...">
-                    </div>
-
-
-
-                    <div>
-                        <label for="fullname">Carte_bancaire_ou_Espece* <label class="validation-error hide"  id="Carte_bancaire_ou_EspeceValidationError" >Le champs doit être renseigné</label> </label>
-                        <input type="text" name="fullname" id="Carte_bancaire_ou_Espece" placeholder="Entrer votre carte de banque ou le billet...">
-                    </div>
-                    <!--
-                    <div>
-
-                        <label for="gender">Sexe</label>
-                        <input type="text" name="gender" id="gender">
-                    </div>
-
-                
-                    <div>
-                        <label for="code">Quartier</label>
-                        <input type="text" name="address" id="address">
-                    </div>
-                -->
-                    <div>
-                        <label for="class">Quantité_de_litre</label>
-                        <input type="text" name="class" id="Quantité_de_litre" placeholder="Entrer la quantité de litre...">
-                    </div>
-                    <!---
-                    <div>
-                        <label for="school">Email</label>
-                        <input type="text" name="school" id="school">
-                    </div>
-                -->
-                    <div>
-                        <input class="form-action-buttons submit" type="submit" value="Enregistrer">
-                    </div>
-
-
+            </tbody>
+        </table>
+        <!-- <div class="model active" id="model"> -->
+        <div class="model" id="model">
+            <div class="model-content">
+                <header class="model-header">
+                    <h2>Créer un nouveau client</h2>
+                    <span class="model-close" id="modelClose">&#10006;</span>
+                </header>
+                <form id="form" class="model-form">
+                    <input type="text" class="model-field" id="name" data-index="new" placeholder="entrer idclient..." required>
+                    <input type="email" class="model-field" id="email" placeholder="entrer email du client*..." required>
+                    <input type="number" class="model-field" id="phone" placeholder="entrer le numero de phone..." required>
+                    <input type="text" class="model-field" id="fees" placeholder="entrer le nom de client...." required>
+                    <input type="text" class="model-field" id="level" placeholder="entrer le prenom du client..." required>
+                    <input type="varchar" class="model-field" id="school" placeholder="entere l'age..." required>
                 </form>
-            </td>
-            <td>
-                <table class="list" id="emplist">
-                    <thead>
-                        <tr>
-                            <td class="thead">Matricule</td>
-                            <td class="thead">Carte_bancaire_ou_Espece</td>
-                            <td class="thead">Quantité_de_litre</td>
-                            <td class="thead">Actions</td>
-                            <!--
-                            <td class="thead">Quartier</td>
-                            <td class="thead">Tel</td>
-                            <td class="thead">Email</td>
-                            -->
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </table>
-    </div>
-
-
-    <script src="assets/js/script.js"></script>
+                <footer class="model-footer">
+                    <button class="button green" id="save">Ajouter</button>
+                    <button class="button blue" id="cancel">Annuler</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Team: <br>my-ser24H<br> Full Stack Senior Developer<br> Phone: +235 66 XX XX XX<br> myser24h@gmail.com
+        <br>
+    </footer>
 </body>
 
 </html>
